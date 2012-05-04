@@ -18,7 +18,6 @@ win.add(Ti.UI.createLabel({
 
 var view = RichText.createRichTextView({                                       
   width: 200,
-  // height: 160,
   height: Ti.UI.SIZE,
   backgroundColor: '#cfc',
   font: font,
@@ -28,9 +27,6 @@ win.add(view);
 
 win.open();
 
-/*
 setTimeout(function() {
-  Ti.API.info("bye!");
-  view.text = "bye bye!";           
+  view.html = "<h1>bye bye!</h1>";
 }, 5000);
-*/
