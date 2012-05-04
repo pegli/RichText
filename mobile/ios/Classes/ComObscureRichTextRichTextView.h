@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TiUIView.h"
 
-@class DTAttributedTextView;
+@class DTAttributedTextContentView;
 
 typedef enum {
     kContentTypeText,
@@ -17,7 +17,7 @@ typedef enum {
 } ContentType;
 
 @interface ComObscureRichTextRichTextView : TiUIView {
-    DTAttributedTextView * attributedTextView;
+    DTAttributedTextContentView * view;
     
     ContentType contentType;
     NSString * content;

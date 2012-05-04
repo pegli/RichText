@@ -25,15 +25,15 @@
         options = [[NSMutableDictionary dictionary] retain];
         configSet = NO;
 
-        attributedTextView = [[DTAttributedTextView alloc] initWithFrame:[self bounds]];
-        attributedTextView.autoresizesSubviews = YES;
-        [self addSubview:attributedTextView];
+        view = [[DTAttributedTextContentView alloc] initWithFrame:[self bounds]];
+        view.autoresizesSubviews = YES;
+        [self addSubview:view];
     }
     return self;
 }
 
 - (void)dealloc {
-    RELEASE_TO_NIL(attributedTextView)
+    RELEASE_TO_NIL(view)
     RELEASE_TO_NIL(content)
     RELEASE_TO_NIL(options)
     [super dealloc];
@@ -41,8 +41,7 @@
 
 - (void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds {
     [super frameSizeChanged:frame bounds:bounds];
-    // calling setBounds on attributed 
-    [attributedTextView setFrame:bounds];
+    [view setFrame:bounds];
 }
 
 #pragma mark -
@@ -55,17 +54,17 @@
 }
 
 -(CGFloat)contentHeightForWidth:(CGFloat)value {
-    return [attributedTextView.contentView suggestedFrameSizeToFitEntireStringConstraintedToWidth:value].height;
+    return [view suggestedFrameSizeToFitEntireStringConstraintedToWidth:value].height;
 }
 
 - (CGFloat)verifyHeight:(CGFloat)suggestedHeight {
-    CGFloat width = attributedTextView.frame.size.width;
-    return [attributedTextView.contentView suggestedFrameSizeToFitEntireStringConstraintedToWidth:width].height;
+    CGFloat width = view.frame.size.width;
+    return [view suggestedFrameSizeToFitEntireStringConstraintedToWidth:width].height;
 }
 
 - (void)setBackgroundColor_:(id)val {
     UIColor * color = [TiUtils colorValue:val].color;
-    attributedTextView.backgroundColor = color;
+    view.backgroundColor = color;
 }
 
 - (void)setColor_:(id)val {
@@ -100,8 +99,8 @@
     }
 
     if (str) {
-        attributedTextView.attributedString = str;
-        NSLog(@"set text content");
+        view.attributedString = str;
+        [(TiViewProxy *)[self proxy] contentsWillChange];
     }
 }
 
