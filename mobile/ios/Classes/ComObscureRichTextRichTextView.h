@@ -11,7 +11,19 @@
 
 @class DTAttributedTextView;
 
+typedef enum {
+    kContentTypeText,
+    kContentTypeHTML
+} ContentType;
+
 @interface ComObscureRichTextRichTextView : TiUIView {
     DTAttributedTextView * attributedTextView;
+    
+    ContentType contentType;
+    NSString * content;
+    
+    NSMutableDictionary * options;
+    
+    BOOL configSet;
 }
 @end
