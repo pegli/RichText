@@ -1,0 +1,3 @@
+[submodule "mobile/ios/vendor/DTCoreText"]
+	path = mobile/ios/vendor/DTCoreText
+	url = https://github.com/pegli/DTCoreText
