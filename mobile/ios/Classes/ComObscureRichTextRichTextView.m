@@ -14,7 +14,6 @@
 #define kDefaultFontSize 12.0 
 
 @interface ComObscureRichTextRichTextView (PrivateMethods)
-//- (DTAttributedTextView *)attributedTextView;
 - (void)setAttributedTextViewContent;
 @end
 
@@ -27,6 +26,7 @@
 
         view = [[DTAttributedTextContentView alloc] initWithFrame:[self bounds]];
         view.autoresizesSubviews = YES;
+        view.backgroundColor = [UIColor clearColor];
         [self addSubview:view];
     }
     return self;
