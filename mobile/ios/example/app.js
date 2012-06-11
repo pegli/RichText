@@ -2,7 +2,7 @@
 
 var RichText = require('com.obscure.RichText');
 
-var win = Ti.UI.createWindow({ backgroundColor:'white', layout: 'vertical' });
+var win = Ti.UI.createWindow({ backgroundColor:'#ccc', layout: 'vertical' });
 
 var font = {
   fontFamily: 'AmericanTypewriter',
@@ -19,7 +19,6 @@ win.add(Ti.UI.createLabel({
 var view = RichText.createRichTextView({                                       
   width: 200,
   height: Ti.UI.SIZE,
-  backgroundColor: '#cfc',
   font: font,
   html: "<h2>Important message!</h2><p>hello, <b>world</b>! I'm <i>really</i> happy to see you.</p>",
 });
