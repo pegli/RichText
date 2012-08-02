@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TiUIView.h"
-
-@class DTAttributedTextContentView;
+#import "DTCoreText.h"
 
 typedef enum {
     kContentTypeText,
     kContentTypeHTML
 } ContentType;
 
-@interface ComObscureRichTextRichTextView : TiUIView {
+@interface ComObscureRichTextRichTextView : TiUIView <DTAttributedTextContentViewDelegate> {
     DTAttributedTextContentView * view;
     
     ContentType contentType;
