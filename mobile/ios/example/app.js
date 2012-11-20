@@ -24,6 +24,19 @@ var view = RichText.createRichTextView({
 });
 win.add(view);
 
+var bgview = RichText.createRichTextView({
+   width: 200,
+   height: Ti.UI.SIZE,
+   color: 'yellow',
+   backgroundColor: 'blue',
+   font: {
+     fontFamily: 'Copperplate',
+     fontSize: 36
+   },
+   html: "<p>para 1</p><p>para 2</p>",
+});
+win.add(bgview);
+
 win.open();
 
 setTimeout(function() {
