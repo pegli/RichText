@@ -2,9 +2,9 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.0
+version: 1.0.1
 apiversion: 2
-description: My module
+description: rich text display widget
 author: Paul Mietz Egli
 license: Apache License 2.0
 copyright: © 2012 Paul Mietz Egli

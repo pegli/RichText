@@ -15,7 +15,7 @@ typedef enum {
     kContentTypeHTML
 } ContentType;
 
-@interface ComObscureRichTextRichTextView : TiUIView <DTAttributedTextContentViewDelegate> {
+@interface ComObscureRichTextRichTextView : TiUIView <DTAttributedTextContentViewDelegate, DTLazyImageViewDelegate> {
     DTAttributedTextContentView * view;
     
     ContentType contentType;

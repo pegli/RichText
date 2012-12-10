@@ -38,7 +38,7 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="iphone" version="1.0">com.obscure.RichText</module>
+        <module platform="iphone" version="1.0.1">com.obscure.RichText</module>
     </modules>
     <deployment-targets>
         <target device="blackberry">false</target>

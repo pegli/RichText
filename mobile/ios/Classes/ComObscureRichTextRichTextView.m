@@ -147,4 +147,42 @@
 	return button;
 }
 
+- (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView viewForAttachment:(DTTextAttachment *)attachment frame:(CGRect)frame {
+    if (attachment.contentType == DTTextAttachmentTypeImage) {
+        DTLazyImageView * imageView = [[DTLazyImageView alloc] initWithFrame:frame];
+        imageView.delegate = self;
+        if (attachment.contents) {
+            imageView.image = attachment.contents;
+        }
+        imageView.url = attachment.contentURL;
+        // TODO linked image?
+        return imageView;
+    }
+    
+    return nil;
+}
+
+#pragma mark DTLazyImageViewDelegate
+
+- (void)lazyImageView:(DTLazyImageView *)lazyImageView didChangeImageSize:(CGSize)size {
+	NSURL *url = lazyImageView.url;
+	CGSize imageSize = size;
+	
+	NSPredicate *pred = [NSPredicate predicateWithFormat:@"contentURL == %@", url];
+	
+	// update all attachments that matchin this URL (possibly multiple images with same size)
+	for (DTTextAttachment *oneAttachment in [view.layoutFrame textAttachmentsWithPredicate:pred]) {
+		oneAttachment.originalSize = imageSize;
+		
+		if (!CGSizeEqualToSize(imageSize, oneAttachment.displaySize)) {
+			oneAttachment.displaySize = imageSize;
+		}
+	}
+	
+	// redo layout
+	// here we're layouting the entire string, might be more efficient to only relayout the paragraphs that contain these attachments
+    [(TiViewProxy *)[self proxy] contentsWillChange];
+	[view relayoutText];
+}
+
 @end

@@ -138,7 +138,6 @@
 			children = (
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
-				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				DA2CF778154EFBE30023A07E /* DTCoreText.xcodeproj */,
 			);
@@ -176,6 +175,7 @@
 				DA2CF7A1154EFC300023A07E /* app.js */,
 				AA747D9E0F9514B9006C5449 /* ComObscureRichText_Prefix.pch */,
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
