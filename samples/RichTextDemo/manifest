@@ -1,9 +1,9 @@
-#appname: RichTextDemo
-#appid: com.obscure.richtextdemo
-#type: mobile
-#guid: ee1fc3ab-c3ab-40f1-9089-5c3cdba39751
-#version: 1.0
-#publisher: not specified
-#url: not specified
-#image: appicon.png
-#desc: not specified
+#appname:RichTextDemo
+#appid:com.obscure.richtextdemo
+#type:ipad
+#guid:ee1fc3ab-c3ab-40f1-9089-5c3cdba39751
+#version:1.0
+#publisher:not specified
+#url:www.napp.dk
+#image:appicon.png
+#desc:not specified

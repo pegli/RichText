@@ -26,6 +26,7 @@
 		24DD6CFA1134B3F500162E58 /* ComObscureRichTextModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComObscureRichTextModule.m */; };
 		AA747D9F0F9514B9006C5449 /* ComObscureRichText_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComObscureRichText_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		B6082AA717105D0B00DB17AF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6082A9A17105D0200DB17AF /* MediaPlayer.framework */; };
 		DA2CF7A0154EFC0D0023A07E /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2CF78A154EFBE30023A07E /* libDTCoreText.a */; };
 		DA67AA35154EF43E009BDBD7 /* ComObscureRichTextRichTextViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DA67AA33154EF43E009BDBD7 /* ComObscureRichTextRichTextViewProxy.h */; };
 		DA67AA36154EF43E009BDBD7 /* ComObscureRichTextRichTextViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA67AA34154EF43E009BDBD7 /* ComObscureRichTextRichTextViewProxy.m */; };
@@ -44,6 +45,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = richtext;
+		};
+		B6082AA317105D0200DB17AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA2CF778154EFBE30023A07E /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7F7EFCD1573603100F5A4D0;
+			remoteInfo = "Static Library (no DTFoundation)";
+		};
+		B6082AA517105D0200DB17AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA2CF778154EFBE30023A07E /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2262DC61638331500BFDAD7;
+			remoteInfo = "Mac Framework";
 		};
 		DA2CF785154EFBE30023A07E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -95,6 +110,7 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ComObscureRichText_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComObscureRichText_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B6082A9A17105D0200DB17AF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComObscureRichText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComObscureRichText.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2CF778154EFBE30023A07E /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = vendor/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
 		DA2CF7A1154EFC300023A07E /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = app.js; path = example/app.js; sourceTree = "<group>"; };
@@ -114,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2CF7A0154EFC0D0023A07E /* libDTCoreText.a in Frameworks */,
+				B6082AA717105D0B00DB17AF /* MediaPlayer.framework in Frameworks */,
 				DA67AA42154EF567009BDBD7 /* CoreText.framework in Frameworks */,
 				DA67AA40154EF561009BDBD7 /* libxml2.dylib in Frameworks */,
 				DA67AA3E154EF55C009BDBD7 /* QuartzCore.framework in Frameworks */,
@@ -147,6 +164,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6082A9A17105D0200DB17AF /* MediaPlayer.framework */,
 				DA67AA41154EF567009BDBD7 /* CoreText.framework */,
 				DA67AA3F154EF561009BDBD7 /* libxml2.dylib */,
 				DA67AA3D154EF55C009BDBD7 /* QuartzCore.framework */,
@@ -183,11 +201,13 @@
 		DA2CF779154EFBE30023A07E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA2CF786154EFBE30023A07E /* DemoApp.app */,
+				DA2CF786154EFBE30023A07E /* RTDemoApp.app */,
 				DA2CF788154EFBE30023A07E /* DTCoreText.framework */,
 				DA2CF78A154EFBE30023A07E /* libDTCoreText.a */,
 				DA2CF78C154EFBE30023A07E /* UnitTest.octest */,
 				DA2CF78E154EFBE30023A07E /* MacUnitTest.octest */,
+				B6082AA417105D0200DB17AF /* libDTCoreText_no_DTFoundation.a */,
+				B6082AA617105D0200DB17AF /* DTCoreText.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,10 +280,24 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DA2CF786154EFBE30023A07E /* DemoApp.app */ = {
+		B6082AA417105D0200DB17AF /* libDTCoreText_no_DTFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTCoreText_no_DTFoundation.a;
+			remoteRef = B6082AA317105D0200DB17AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B6082AA617105D0200DB17AF /* DTCoreText.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTCoreText.framework;
+			remoteRef = B6082AA517105D0200DB17AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA2CF786154EFBE30023A07E /* RTDemoApp.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = DemoApp.app;
+			path = RTDemoApp.app;
 			remoteRef = DA2CF785154EFBE30023A07E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
