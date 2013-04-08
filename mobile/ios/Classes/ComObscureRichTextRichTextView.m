@@ -97,7 +97,7 @@
 
     switch (contentType) {
         case kContentTypeHTML:
-            str = [[NSAttributedString alloc] initWithHTML:[content dataUsingEncoding:NSUTF8StringEncoding] options:options documentAttributes:nil];
+            str = [[NSAttributedString alloc] initWithHTMLData:[content dataUsingEncoding:NSUTF8StringEncoding] options:options documentAttributes:nil];
             break;
         default:
             str = [[NSAttributedString alloc] initWithString:content];
