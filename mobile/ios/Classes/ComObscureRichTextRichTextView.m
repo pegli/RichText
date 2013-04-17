@@ -163,7 +163,6 @@
 
 - (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView viewForAttachment:(DTTextAttachment *)attachment frame:(CGRect)frame
 {
-	NSLog(@"contentType %@", attachment.contentType);
     
     if (attachment.contentType == DTTextAttachmentTypeVideoURL)
 	{
